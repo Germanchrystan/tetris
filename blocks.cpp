@@ -37,6 +37,7 @@ class IBlock:public Block
     cells[1] = {Position(0,2), Position(1,2), Position(2,2), Position(3,2)};
     cells[2] = {Position(2,0), Position(2,1), Position(2,2), Position(2,3)};
     cells[3] = {Position(0,1), Position(1,1), Position(2,1), Position(3,1)};
+    Move(-1,0); // Correcting position for this block
   }
 };
 
@@ -50,6 +51,7 @@ class OBlock:public Block
     cells[1] = cells[0];
     cells[2] = cells[0];
     cells[3] = cells[0];
+    Move(0,1); // Correcting position for this block
   }
 };
 

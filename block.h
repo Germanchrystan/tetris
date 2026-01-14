@@ -9,11 +9,17 @@ class Block
   private:
   int cellSize;
   int rotationState;
+  int rowOffset;
+  int colOffset;
   std::vector<Color> colors;
 
   public:
     Block();
+    void Move(int rows, int columns);
+    std::vector<Position> GetCellPositions();
     void Draw();
     int id;
     std::map<int,std::vector<Position>> cells;
+    void Rotate();
+    void UndoRotation();
 };
