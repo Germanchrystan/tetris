@@ -19,8 +19,8 @@ void Block::Draw()
     DrawRectangle(
       item.column * cellSize + GRID_MARGIN,
       item.row * cellSize + GRID_MARGIN,
-      cellSize + 1,
-      cellSize + 1,
+      cellSize - 1,
+      cellSize - 1,
       colors[id]);
   }
 }
