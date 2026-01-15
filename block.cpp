@@ -1,5 +1,6 @@
 #include "block.h"
 #include "colors.h"
+#include "constants.h"
 #define START_COL_POSITION 3
 Block::Block()
 {
@@ -16,8 +17,8 @@ void Block::Draw()
   for(Position item: tiles)
   {
     DrawRectangle(
-      item.column * cellSize,
-      item.row * cellSize,
+      item.column * cellSize + GRID_MARGIN,
+      item.row * cellSize + GRID_MARGIN,
       cellSize + 1,
       cellSize + 1,
       colors[id]);

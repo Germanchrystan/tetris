@@ -9,6 +9,10 @@ class Game
     Block currentBlock;
     Block nextBlock;
     bool IsBlockOutside();
+    void LockBlock();
+    bool BlockFits();
+    bool IsBlockMovementAllowed();
+    void Reset();
 
   public:
     Grid grid;
@@ -22,4 +26,5 @@ class Game
     void MoveBlockLeft();
     void MoveBlockRight();
     void MoveBlockDown();
+    bool gameOver;
 };
