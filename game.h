@@ -22,6 +22,7 @@ class Game
 
   public:
     Game();
+    ~Game();
     void HandleInput();
     void RotateBlock();
     void UndoRotation();
@@ -29,4 +30,7 @@ class Game
     void MoveBlockDown();
     bool gameOver;
     int score;
+    Music music;
+    Sound rotateSound;
+    Sound clearSound;
 };
