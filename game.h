@@ -13,18 +13,20 @@ class Game
     bool BlockFits();
     bool IsBlockMovementAllowed();
     void Reset();
-
-  public:
-    Grid grid;
-    Game();
+    void UpdateScore(int linesCleared, int moveDownPoints);
+    void MoveBlockLeft();
+    void MoveBlockRight();
     Block GetRandomBlock();
     std::vector<Block> GetAllBlocks();
+    Grid grid;
+
+  public:
+    Game();
     void HandleInput();
     void RotateBlock();
     void UndoRotation();
     void Draw();
-    void MoveBlockLeft();
-    void MoveBlockRight();
     void MoveBlockDown();
     bool gameOver;
+    int score;
 };
